@@ -51,18 +51,15 @@ app.add_middleware(SlowAPIMiddleware)
 secret_key = os.getenv("SESSION_SECRET", "change-me")
 app.add_middleware(SessionMiddleware, secret_key=secret_key)
 
-allowed_origins = [
-    origin.strip()
-    for origin in os.getenv(
-        "ALLOWED_ORIGINS",
-        "http://localhost:3000,https://waitinglist.app",
-    ).split(",")
-    if origin.strip()
+origins = [
+    "http://localhost:3000",
+    "https://waitinglist-total.vercel.app",
 ]
+
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=allowed_origins or ["*"],
+    allow_origins=origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
