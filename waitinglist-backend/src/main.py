@@ -15,6 +15,7 @@ from starlette.responses import JSONResponse
 
 from src.limiter import limiter
 from src.routes import api_router
+from src.services.resend_mail_service import ResendServiceError
 
 logging.basicConfig(
     level=logging.INFO,
@@ -43,6 +44,15 @@ async def rate_limit_handler(request: Request, exc: RateLimitExceeded):
     return JSONResponse(
         status_code=429,
         content={"detail": f"Rate limit exceeded: {exc.detail}"},
+    )
+
+
+@app.exception_handler(ResendServiceError)
+async def resend_exception_handler(request: Request, exc: ResendServiceError):
+    logger.error(f"Resend error: {exc}")
+    return JSONResponse(
+        status_code=exc.status_code,
+        content={"detail": str(exc)},
     )
 
 
