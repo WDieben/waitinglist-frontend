@@ -5,9 +5,8 @@ ENV PYTHONUNBUFFERED=1 \
 
 WORKDIR /app
 
-# Install minimal runtime deps for Pillow/FFmpeg (optional but handy for future)
+# Install minimal runtime deps for Pillow
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    ffmpeg \
     libjpeg62-turbo libpng16-16 \
     libfreetype6 libfontconfig1 \
     fonts-dejavu fonts-liberation \
