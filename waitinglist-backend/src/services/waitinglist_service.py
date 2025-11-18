@@ -29,14 +29,11 @@ async def process_waitlist_signup(
     await db.commit()
     await db.refresh(entry)
 
-    try:
-        await send_waitlist_confirmation_email(
-            name=payload.name,
-            email=payload.email
-        )
-    except ResendServiceError as exc:
-        logger.exception("Failed to send confirmation email via Resend")
-        pass
+    # We want to propagate the error if email sending fails, so the user knows
+    await send_waitlist_confirmation_email(
+        name=payload.name,
+        email=payload.email
+    )
 
     return WaitlistResponse(
         success=True,
