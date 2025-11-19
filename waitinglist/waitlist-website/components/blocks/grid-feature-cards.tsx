@@ -19,14 +19,14 @@ export function FeatureCard({ feature, className, index = 0, ...props }: Feature
 	return (
 		<div className={cn('relative overflow-hidden p-4 sm:p-6 bg-white border border-border rounded-2xl hover:border-primary/50 transition-all duration-300 group shadow-sm hover:shadow-md', className)} {...props}>
 			<div className="pointer-events-none absolute top-0 left-1/2 -mt-2 -ml-20 h-full w-full [mask-image:linear-gradient(white,transparent)]">
-				<div className="absolute inset-0 bg-gradient-to-r from-muted/50 to-muted/50 [mask-image:radial-gradient(farthest-side_at_top,white,transparent)] opacity-100">
+				<div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-primary/5 [mask-image:radial-gradient(farthest-side_at_top,white,transparent)] opacity-100">
 					<GridPattern
 						width={20}
 						height={20}
 						x="-12"
 						y="4"
 						squares={p}
-						className="fill-black/5 stroke-black/5 absolute inset-0 h-full w-full mix-blend-overlay"
+						className="fill-primary/5 stroke-primary/10 absolute inset-0 h-full w-full mix-blend-overlay"
 					/>
 				</div>
 			</div>

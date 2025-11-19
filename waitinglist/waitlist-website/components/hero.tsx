@@ -1,21 +1,11 @@
 'use client'
 
-import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
-import { ArrowRight, CheckCircle2 } from 'lucide-react'
+import { WaitlistForm } from '@/components/waitlist-form'
+import { CheckCircle2 } from 'lucide-react'
 
 export default function Hero() {
-  const [email, setEmail] = useState('')
-  const [submitted, setSubmitted] = useState(false)
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    // Simulate submission
-    setSubmitted(true)
-    setTimeout(() => setSubmitted(false), 3000)
-  }
 
   return (
     <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden bg-background">
@@ -51,31 +41,7 @@ export default function Hero() {
                 Stepps.ai automatically records your workflow and generates beautiful, step-by-step guides. Stop writing docs manually.
               </p>
 
-              <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto lg:mx-0">
-                <Input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="bg-white border-input text-foreground placeholder:text-muted-foreground h-12 rounded-full px-6 shadow-sm"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                />
-                <Button
-                  type="submit"
-                  size="lg"
-                  className="bg-brand-dark hover:bg-brand-dark/90 text-white border-0 h-12 px-8 rounded-full shadow-md transition-all"
-                >
-                  {submitted ? (
-                    <span className="flex items-center gap-2">
-                      <CheckCircle2 className="w-5 h-5" /> Joined
-                    </span>
-                  ) : (
-                    <span className="flex items-center gap-2">
-                      Get Early Access <ArrowRight className="w-4 h-4" />
-                    </span>
-                  )}
-                </Button>
-              </form>
+              <WaitlistForm className="mx-auto lg:mx-0" />
 
               <div className="mt-8 flex items-center justify-center lg:justify-start gap-6 text-sm text-muted-foreground">
                 <div className="flex items-center gap-2">

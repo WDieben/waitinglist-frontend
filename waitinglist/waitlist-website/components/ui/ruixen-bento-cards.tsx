@@ -38,6 +38,22 @@ const cardContents = [
 ]
 
 
+const CornerPlusIcon = ({ className }: { className?: string }) => {
+  return (
+    <div className={cn("absolute w-4 h-4 pointer-events-none z-20", className)}>
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        className="w-full h-full text-muted-foreground/40"
+      >
+        <path d="M12 5v14M5 12h14" />
+      </svg>
+    </div>
+  );
+};
+
 const PlusCard: React.FC<{
   className?: string
   title: string
@@ -57,6 +73,12 @@ const PlusCard: React.FC<{
           className
         )}
       >
+        {/* Corner Icons */}
+        <CornerPlusIcon className="-top-2 -left-2" />
+        <CornerPlusIcon className="-top-2 -right-2" />
+        <CornerPlusIcon className="-bottom-2 -left-2" />
+        <CornerPlusIcon className="-bottom-2 -right-2" />
+
         <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
           <ArrowUpRight className="w-5 h-5 text-primary" />
         </div>
@@ -72,7 +94,7 @@ const PlusCard: React.FC<{
 
           <div className="flex flex-wrap gap-2 mt-auto pt-4">
             {tags.map((tag) => (
-              <span key={tag} className="text-xs font-medium px-2 py-1 rounded-md bg-white/5 text-muted-foreground border border-white/5">
+              <span key={tag} className="text-xs font-medium px-2 py-1 rounded-md bg-muted text-muted-foreground border border-border">
                 {tag}
               </span>
             ))}
