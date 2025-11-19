@@ -95,7 +95,7 @@ export default function HowItWorks() {
   }, { scope: sectionRef })
 
   return (
-    <section ref={sectionRef} id="how-it-works" className="relative w-full py-12 sm:py-16 lg:py-20 xl:py-24 px-4 sm:px-6 lg:px-8 bg-background">
+    <section ref={sectionRef} id="how-it-works" className="relative w-full py-12 sm:py-16 lg:py-20 xl:py-24 px-4 sm:px-6 lg:px-8">
       {/* Background Elements */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(99,102,241,0.05),transparent_50%)]" />
 

@@ -71,7 +71,7 @@ export default function BuiltForTeams() {
   }, { scope: sectionRef })
 
   return (
-    <section ref={sectionRef} id="features" className="relative w-full py-8 sm:py-12 lg:py-16 xl:py-20 px-4 sm:px-6 lg:px-8 bg-background">
+    <section ref={sectionRef} id="features" className="relative w-full py-8 sm:py-12 lg:py-16 xl:py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl lg:max-w-7xl mx-auto">
         <div ref={headerRef} className="text-center mb-8 sm:mb-12 lg:mb-16">
           <div ref={badgeRef}>

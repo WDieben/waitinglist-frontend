@@ -46,7 +46,7 @@ const PlusCard: React.FC<{
     return (
       <div
         className={cn(
-          "relative border border-dashed border-border rounded-lg p-6 bg-white hover:border-primary/50 transition-colors group min-h-[200px]",
+          "relative border border-dashed border-border rounded-lg p-6 hover:border-primary/50 transition-colors group min-h-[200px]",
           "flex flex-col justify-between",
           className
         )}
@@ -89,7 +89,7 @@ const PlusIcon = ({ className }: { className?: string }) => (
 
 export default function RuixenBentoCards() {
   return (
-    <section className="bg-white dark:bg-black dark:bg-transparent">
+    <section className="dark:bg-black dark:bg-transparent">
       <div className="mx-auto container py-12 px-4">
         {/* Responsive Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 auto-rows-auto gap-4">
