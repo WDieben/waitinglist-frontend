@@ -87,7 +87,7 @@ export default function Footer() {
                     <div className="flex flex-col lg:flex-row items-start justify-between gap-12 lg:gap-24">
 
                         {/* Left Side: Heading & Description */}
-                        <div className="max-w-2xl w-full">
+                        <div className="max-w-2xl w-full text-center md:text-left">
                             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 leading-[1.1] font-sans">
                                 Generate Ideas, <br />
                                 build confidence
@@ -100,29 +100,80 @@ export default function Footer() {
                         </div>
                     </div>
 
-                    {/* Footer Links Section - Simplified */}
-                    <div className="mt-24 pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between gap-12 items-center">
+                    {/* Footer Links Section - Better Responsive Layout */}
+                    <div className="mt-24 pt-12 border-t border-white/10">
 
-                        {/* Brand */}
-                        <div className="space-y-4">
-                            <Link href="/" className="flex items-center gap-3">
-                                <img
-                                    src="/logo-symbol.svg"
-                                    alt="stepps.ai Symbol"
-                                    className="h-8 w-auto"
-                                />
-                                <span className="font-sans text-2xl font-bold tracking-tight text-white">
-                                    stepps.ai
-                                </span>
-                            </Link>
+                        {/* Brand & Links Container */}
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 mb-12">
+
+                            {/* Brand Column */}
+                            <div className="md:col-span-1">
+                                <Link href="/" className="flex justify-center md:justify-start mb-6">
+                                    <img
+                                        src="/logo-symbol.svg"
+                                        alt="stepps.ai Symbol"
+                                        className="h-10 w-auto"
+                                    />
+                                </Link>
+                            </div>
+
+                            {/* Links Column */}
+                            <div className="md:col-span-2 grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-6">
+
+                                {/* Contact Links */}
+                                <div className="space-y-4 text-center md:text-left">
+                                    <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">Contact</h3>
+                                    <ul className="space-y-3">
+                                        <li>
+                                            <Link href="mailto:support@stepps.ai" className="text-sm text-white/60 hover:text-white transition-colors">
+                                                support@stepps.ai
+                                            </Link>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                {/* Legal Links */}
+                                <div className="space-y-4 text-center md:text-left">
+                                    <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">Legal</h3>
+                                    <ul className="space-y-3">
+                                        <li>
+                                            <Link href="#" className="text-sm text-white/60 hover:text-white transition-colors">
+                                                Privacy Policy
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link href="#" className="text-sm text-white/60 hover:text-white transition-colors">
+                                                Terms of Service
+                                            </Link>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                {/* Social/Other Links */}
+                                <div className="space-y-4 text-center md:text-left">
+                                    <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">Company</h3>
+                                    <ul className="space-y-3">
+                                        <li>
+                                            <Link href="/" className="text-sm text-white/60 hover:text-white transition-colors">
+                                                About
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link href="/" className="text-sm text-white/60 hover:text-white transition-colors">
+                                                Waitlist
+                                            </Link>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
 
-                        {/* Copyright & Legal */}
-                        <div className="flex flex-col sm:flex-row items-center gap-6 text-xs text-white/40">
-                            <p>© 2025 stepps.ai. All rights reserved.</p>
-                            <div className="flex gap-6">
-                                <Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link>
-                                <Link href="#" className="hover:text-white transition-colors">Terms of Service</Link>
+                        {/* Bottom Copyright Bar */}
+                        <div className="pt-8 border-t border-white/5">
+                            <div className="text-center">
+                                <p className="text-xs text-white/40">
+                                    © 2025 stepps.ai All rights reserved.
+                                </p>
                             </div>
                         </div>
                     </div>
