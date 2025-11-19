@@ -93,7 +93,7 @@ export default function Footer() {
                                 build confidence
                             </h2>
                             <p className="text-lg text-white/60 mb-8 max-w-xl leading-relaxed">
-                                Get started with Stepps.ai today. Stop writing docs manually and start generating beautiful guides in seconds.
+                                Join the waitlist for Stepps.ai today. Be the first to generate beautiful step-by-step guides when we launch.
                             </p>
 
                             <WaitlistForm variant="footer" />

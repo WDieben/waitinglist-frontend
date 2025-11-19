@@ -111,7 +111,7 @@ export default function HowItWorks() {
             Transform your workflow
           </h2>
           <p ref={descriptionRef} className="text-sm sm:text-base lg:text-lg text-muted-foreground max-w-xs sm:max-w-2xl lg:max-w-3xl mx-auto leading-relaxed">
-            From recording to sharing, our AI-powered platform makes documentation effortless and collaborative
+            From recording to sharing, our intelligent platform makes documentation effortless and collaborative
           </p>
         </div>
 
