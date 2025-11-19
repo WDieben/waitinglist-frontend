@@ -43,17 +43,6 @@ export default function Hero() {
               </p>
 
               <WaitlistForm className="mx-auto lg:mx-0" />
-
-              <div className="mt-8 flex items-center justify-center lg:justify-start gap-6 text-sm text-muted-foreground">
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-primary" />
-                  <span>Automated capture</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-primary" />
-                  <span>Instant sharing</span>
-                </div>
-              </div>
             </motion.div>
           </div>
 

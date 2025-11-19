@@ -46,7 +46,7 @@ const PlusCard: React.FC<{
     return (
       <div
         className={cn(
-          "relative border border-dashed border-zinc-400 dark:border-zinc-700 rounded-lg p-6 bg-white dark:bg-zinc-950 min-h-[200px]",
+          "relative border border-dashed border-border rounded-lg p-6 bg-white hover:border-primary/50 transition-colors group min-h-[200px]",
           "flex flex-col justify-between",
           className
         )}
@@ -54,10 +54,10 @@ const PlusCard: React.FC<{
         <CornerPlusIcons />
         {/* Content */}
         <div className="relative z-10 space-y-2">
-          <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100">
+          <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">
             {title}
           </h3>
-          <p className="text-gray-700 dark:text-gray-300">{description}</p>
+          <p className="text-muted-foreground">{description}</p>
         </div>
       </div>
     )
@@ -81,7 +81,7 @@ const PlusIcon = ({ className }: { className?: string }) => (
     height={24}
     strokeWidth="1"
     stroke="currentColor"
-    className={`dark:text-white text-black size-6 ${className}`}
+    className={`text-muted-foreground/40 size-6 ${className}`}
   >
     <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m6-6H6" />
   </svg>
@@ -89,8 +89,8 @@ const PlusIcon = ({ className }: { className?: string }) => (
 
 export default function RuixenBentoCards() {
   return (
-    <section className="bg-white dark:bg-black dark:bg-transparent border border-gray-200 dark:border-gray-800">
-      <div className="mx-auto container border border-gray-200 dark:border-gray-800 py-12 border-t-0 px-4">
+    <section className="bg-white dark:bg-black dark:bg-transparent">
+      <div className="mx-auto container py-12 px-4">
         {/* Responsive Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 auto-rows-auto gap-4">
           <PlusCard {...cardContents[0]} className="lg:col-span-3 lg:row-span-2" />
